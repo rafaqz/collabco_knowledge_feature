@@ -73,3 +73,11 @@ features_exclude[field_instance][node-knowledge_object-og_group_ref] = node-know
 features_exclude[field_instance][node-knowledge_object-field_precinct] = node-knowledge_object-field_precinct
 features_exclude[taxonomy][precinct] = precinct
 project path = sites/all/modules/features
+
+
+; Information added by drush on 2013-08-19
+version = "7.x-1.0-alpha1"
+core = "7.x"
+project = "collabco_knowledge_feature"
+datestamp = "1376972205"
+
