@@ -14,7 +14,6 @@ function collabco_knowledge_feature_user_default_permissions() {
   $permissions['create knowledge_object content'] = array(
     'name' => 'create knowledge_object content',
     'roles' => array(
-      'Admin' => 'Admin',
       'authenticated user' => 'authenticated user',
     ),
     'module' => 'node',
@@ -23,11 +22,7 @@ function collabco_knowledge_feature_user_default_permissions() {
   // Exported permission: delete any knowledge_object content.
   $permissions['delete any knowledge_object content'] = array(
     'name' => 'delete any knowledge_object content',
-    'roles' => array(
-      'Admin' => 'Admin',
-      'Community Moderator' => 'Community Moderator',
-      'Content Manager' => 'Content Manager',
-    ),
+    'roles' => array(),
     'module' => 'node',
   );
 
@@ -35,7 +30,6 @@ function collabco_knowledge_feature_user_default_permissions() {
   $permissions['delete own knowledge_object content'] = array(
     'name' => 'delete own knowledge_object content',
     'roles' => array(
-      'Admin' => 'Admin',
       'authenticated user' => 'authenticated user',
     ),
     'module' => 'node',
@@ -44,11 +38,7 @@ function collabco_knowledge_feature_user_default_permissions() {
   // Exported permission: edit any knowledge_object content.
   $permissions['edit any knowledge_object content'] = array(
     'name' => 'edit any knowledge_object content',
-    'roles' => array(
-      'Admin' => 'Admin',
-      'Community Moderator' => 'Community Moderator',
-      'Content Manager' => 'Content Manager',
-    ),
+    'roles' => array(),
     'module' => 'node',
   );
 
@@ -56,7 +46,6 @@ function collabco_knowledge_feature_user_default_permissions() {
   $permissions['edit own knowledge_object content'] = array(
     'name' => 'edit own knowledge_object content',
     'roles' => array(
-      'Admin' => 'Admin',
       'authenticated user' => 'authenticated user',
     ),
     'module' => 'node',
