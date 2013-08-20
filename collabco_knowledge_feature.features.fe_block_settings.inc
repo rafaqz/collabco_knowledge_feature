@@ -22,6 +22,12 @@ function collabco_knowledge_feature_default_fe_block_settings() {
     'pages' => '',
     'roles' => array(),
     'themes' => array(
+      'iin_subtheme' => array(
+        'region' => '',
+        'status' => 0,
+        'theme' => 'iin_subtheme',
+        'weight' => 0,
+      ),
       'openhub' => array(
         'region' => '',
         'status' => 0,
@@ -49,6 +55,12 @@ function collabco_knowledge_feature_default_fe_block_settings() {
     'pages' => '',
     'roles' => array(),
     'themes' => array(
+      'iin_subtheme' => array(
+        'region' => '',
+        'status' => 0,
+        'theme' => 'iin_subtheme',
+        'weight' => 0,
+      ),
       'openhub' => array(
         'region' => '',
         'status' => 0,
@@ -76,6 +88,12 @@ function collabco_knowledge_feature_default_fe_block_settings() {
     'pages' => '',
     'roles' => array(),
     'themes' => array(
+      'iin_subtheme' => array(
+        'region' => '',
+        'status' => 0,
+        'theme' => 'iin_subtheme',
+        'weight' => 0,
+      ),
       'openhub' => array(
         'region' => '',
         'status' => 0,
@@ -103,6 +121,12 @@ function collabco_knowledge_feature_default_fe_block_settings() {
     'pages' => '',
     'roles' => array(),
     'themes' => array(
+      'iin_subtheme' => array(
+        'region' => '',
+        'status' => 0,
+        'theme' => 'iin_subtheme',
+        'weight' => 0,
+      ),
       'openhub' => array(
         'region' => '',
         'status' => 0,

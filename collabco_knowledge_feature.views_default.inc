@@ -86,18 +86,13 @@ function collabco_knowledge_feature_views_default_views() {
     'image_style' => 'content_thumb',
     'image_link' => 'content',
   );
-  /* Field: Content: Image */
+  /* Field: Broken/missing handler */
   $handler->display->display_options['fields']['field_image']['id'] = 'field_image';
   $handler->display->display_options['fields']['field_image']['table'] = 'field_data_field_image';
   $handler->display->display_options['fields']['field_image']['field'] = 'field_image';
   $handler->display->display_options['fields']['field_image']['label'] = '';
   $handler->display->display_options['fields']['field_image']['exclude'] = TRUE;
   $handler->display->display_options['fields']['field_image']['element_label_colon'] = FALSE;
-  $handler->display->display_options['fields']['field_image']['click_sort_column'] = 'fid';
-  $handler->display->display_options['fields']['field_image']['settings'] = array(
-    'image_style' => 'thumbnail',
-    'image_link' => 'content',
-  );
   /* Field: Global: Custom text */
   $handler->display->display_options['fields']['nothing']['id'] = 'nothing';
   $handler->display->display_options['fields']['nothing']['table'] = 'views';
@@ -286,7 +281,7 @@ function collabco_knowledge_feature_views_default_views() {
   $handler->display->display_options['fields']['term_node_tid']['vocabularies'] = array(
     'knowledge_object_categories' => 'knowledge_object_categories',
   );
-  /* Field: Field: Website */
+  /* Field: Profile: Website */
   $handler->display->display_options['fields']['field_external_link']['id'] = 'field_external_link';
   $handler->display->display_options['fields']['field_external_link']['table'] = 'field_data_field_external_link';
   $handler->display->display_options['fields']['field_external_link']['field'] = 'field_external_link';
