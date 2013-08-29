@@ -73,3 +73,10 @@ features_exclude[field_instance][node-knowledge_object-og_group_ref] = node-know
 features_exclude[field_instance][node-knowledge_object-field_precinct] = node-knowledge_object-field_precinct
 features_exclude[field_instance][node-knowledge_object-field_external_link] = node-knowledge_object-field_external_link
 features_exclude[taxonomy][precinct] = precinct
+
+
+; Information added by drush on 2013-08-28
+version = "unknown"
+project = "collabco_knowledge_feature"
+datestamp = "1377754254"
+
