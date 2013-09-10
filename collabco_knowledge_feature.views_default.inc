@@ -75,24 +75,24 @@ function collabco_knowledge_feature_views_default_views() {
     'trim_length' => '50',
   );
   /* Field: Content: Knowledge Object Image */
-  $handler->display->display_options['fields']['field_knowledge_object_image']['id'] = 'field_knowledge_object_image';
-  $handler->display->display_options['fields']['field_knowledge_object_image']['table'] = 'field_data_field_knowledge_object_image';
-  $handler->display->display_options['fields']['field_knowledge_object_image']['field'] = 'field_knowledge_object_image';
-  $handler->display->display_options['fields']['field_knowledge_object_image']['label'] = '';
-  $handler->display->display_options['fields']['field_knowledge_object_image']['exclude'] = TRUE;
-  $handler->display->display_options['fields']['field_knowledge_object_image']['element_label_colon'] = FALSE;
-  $handler->display->display_options['fields']['field_knowledge_object_image']['click_sort_column'] = 'fid';
-  $handler->display->display_options['fields']['field_knowledge_object_image']['settings'] = array(
+  $handler->display->display_options['fields']['field_ko_image']['id'] = 'field_ko_image';
+  $handler->display->display_options['fields']['field_ko_image']['table'] = 'field_data_field_ko_image';
+  $handler->display->display_options['fields']['field_ko_image']['field'] = 'field_ko_image';
+  $handler->display->display_options['fields']['field_ko_image']['label'] = '';
+  $handler->display->display_options['fields']['field_ko_image']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['field_ko_image']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_ko_image']['click_sort_column'] = 'fid';
+  $handler->display->display_options['fields']['field_ko_image']['settings'] = array(
     'image_style' => 'content_thumb',
     'image_link' => 'content',
   );
   /* Field: Broken/missing handler */
-  $handler->display->display_options['fields']['field_image']['id'] = 'field_image';
-  $handler->display->display_options['fields']['field_image']['table'] = 'field_data_field_image';
-  $handler->display->display_options['fields']['field_image']['field'] = 'field_image';
-  $handler->display->display_options['fields']['field_image']['label'] = '';
-  $handler->display->display_options['fields']['field_image']['exclude'] = TRUE;
-  $handler->display->display_options['fields']['field_image']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_ko_image']['id'] = 'field_ko_image';
+  $handler->display->display_options['fields']['field_ko_image']['table'] = 'field_data_field_ko_image';
+  $handler->display->display_options['fields']['field_ko_image']['field'] = 'field_ko_image';
+  $handler->display->display_options['fields']['field_ko_image']['label'] = '';
+  $handler->display->display_options['fields']['field_ko_image']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['field_ko_image']['element_label_colon'] = FALSE;
   /* Field: Global: Custom text */
   $handler->display->display_options['fields']['nothing']['id'] = 'nothing';
   $handler->display->display_options['fields']['nothing']['table'] = 'views';
@@ -106,7 +106,7 @@ function collabco_knowledge_feature_views_default_views() {
     [body]
   </div>
   <div class="span6">
-    [field_image]
+    [field_ko_image]
   </div>
 </div>';
   $handler->display->display_options['fields']['nothing']['element_label_colon'] = FALSE;
@@ -176,8 +176,8 @@ function collabco_knowledge_feature_views_default_views() {
     'title' => 'title',
     'og_group_ref' => 'og_group_ref',
     'term_node_tid' => 'term_node_tid',
-    'field_external_link' => 'field_external_link',
-    'field_file_or_media' => 'field_file_or_media',
+    'field_ko_external_link' => 'field_ko_external_link',
+    'field_ko_file' => 'field_ko_file',
     'name' => 'name',
     'picture' => 'picture',
     'created' => 'created',
@@ -206,12 +206,12 @@ function collabco_knowledge_feature_views_default_views() {
       'separator' => '',
       'empty_column' => 0,
     ),
-    'field_external_link' => array(
+    'field_ko_external_link' => array(
       'align' => '',
       'separator' => '',
       'empty_column' => 0,
     ),
-    'field_file_or_media' => array(
+    'field_ko_file' => array(
       'align' => '',
       'separator' => '',
       'empty_column' => 0,
@@ -282,18 +282,18 @@ function collabco_knowledge_feature_views_default_views() {
     'knowledge_object_categories' => 'knowledge_object_categories',
   );
   /* Field: Profile: Website */
-  $handler->display->display_options['fields']['field_external_link']['id'] = 'field_external_link';
-  $handler->display->display_options['fields']['field_external_link']['table'] = 'field_data_field_external_link';
-  $handler->display->display_options['fields']['field_external_link']['field'] = 'field_external_link';
-  $handler->display->display_options['fields']['field_external_link']['label'] = 'External Link';
-  $handler->display->display_options['fields']['field_external_link']['click_sort_column'] = 'url';
-  $handler->display->display_options['fields']['field_external_link']['delta_offset'] = '0';
+  $handler->display->display_options['fields']['field_ko_external_link']['id'] = 'field_ko_external_link';
+  $handler->display->display_options['fields']['field_ko_external_link']['table'] = 'field_data_field_ko_external_link';
+  $handler->display->display_options['fields']['field_ko_external_link']['field'] = 'field_ko_external_link';
+  $handler->display->display_options['fields']['field_ko_external_link']['label'] = 'External Link';
+  $handler->display->display_options['fields']['field_ko_external_link']['click_sort_column'] = 'url';
+  $handler->display->display_options['fields']['field_ko_external_link']['delta_offset'] = '0';
   /* Field: Content: File or Media */
-  $handler->display->display_options['fields']['field_file_or_media']['id'] = 'field_file_or_media';
-  $handler->display->display_options['fields']['field_file_or_media']['table'] = 'field_data_field_file_or_media';
-  $handler->display->display_options['fields']['field_file_or_media']['field'] = 'field_file_or_media';
-  $handler->display->display_options['fields']['field_file_or_media']['click_sort_column'] = 'fid';
-  $handler->display->display_options['fields']['field_file_or_media']['delta_offset'] = '0';
+  $handler->display->display_options['fields']['field_ko_file']['id'] = 'field_ko_file';
+  $handler->display->display_options['fields']['field_ko_file']['table'] = 'field_data_field_ko_file';
+  $handler->display->display_options['fields']['field_ko_file']['field'] = 'field_ko_file';
+  $handler->display->display_options['fields']['field_ko_file']['click_sort_column'] = 'fid';
+  $handler->display->display_options['fields']['field_ko_file']['delta_offset'] = '0';
   /* Field: User: Name */
   $handler->display->display_options['fields']['name']['id'] = 'name';
   $handler->display->display_options['fields']['name']['table'] = 'users';
@@ -311,10 +311,10 @@ function collabco_knowledge_feature_views_default_views() {
   $handler->display->display_options['fields']['created']['label'] = 'Date posted';
   $handler->display->display_options['fields']['created']['date_format'] = 'long';
   /* Field: Content: License */
-  $handler->display->display_options['fields']['field_license']['id'] = 'field_license';
-  $handler->display->display_options['fields']['field_license']['table'] = 'field_data_field_license';
-  $handler->display->display_options['fields']['field_license']['field'] = 'field_license';
-  $handler->display->display_options['fields']['field_license']['type'] = 'creative_commons_large_image';
+  $handler->display->display_options['fields']['field_ko_license']['id'] = 'field_ko_license';
+  $handler->display->display_options['fields']['field_ko_license']['table'] = 'field_data_field_ko_license';
+  $handler->display->display_options['fields']['field_ko_license']['field'] = 'field_ko_license';
+  $handler->display->display_options['fields']['field_ko_license']['type'] = 'creative_commons_large_image';
   /* Sort criterion: Content: Post date */
   $handler->display->display_options['sorts']['created']['id'] = 'created';
   $handler->display->display_options['sorts']['created']['table'] = 'node';

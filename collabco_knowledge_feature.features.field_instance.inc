@@ -88,8 +88,8 @@ function collabco_knowledge_feature_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-knowledge_object-field_author_or_source'
-  $field_instances['node-knowledge_object-field_author_or_source'] = array(
+  // Exported field_instance: 'node-knowledge_object-field_ko_source'
+  $field_instances['node-knowledge_object-field_ko_source'] = array(
     'bundle' => 'knowledge_object',
     'default_value' => NULL,
     'deleted' => 0,
@@ -110,7 +110,7 @@ function collabco_knowledge_feature_field_default_field_instances() {
       ),
     ),
     'entity_type' => 'node',
-    'field_name' => 'field_author_or_source',
+    'field_name' => 'field_ko_source',
     'label' => 'Author or Source',
     'required' => 0,
     'settings' => array(
@@ -128,8 +128,8 @@ function collabco_knowledge_feature_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-knowledge_object-field_file_or_media'
-  $field_instances['node-knowledge_object-field_file_or_media'] = array(
+  // Exported field_instance: 'node-knowledge_object-field_ko_file'
+  $field_instances['node-knowledge_object-field_ko_file'] = array(
     'bundle' => 'knowledge_object',
     'deleted' => 0,
     'description' => 'Upload files or media to share with one or more groups',
@@ -149,7 +149,7 @@ function collabco_knowledge_feature_field_default_field_instances() {
       ),
     ),
     'entity_type' => 'node',
-    'field_name' => 'field_file_or_media',
+    'field_name' => 'field_ko_file',
     'label' => 'File or Media',
     'required' => 0,
     'settings' => array(
@@ -170,8 +170,8 @@ function collabco_knowledge_feature_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-knowledge_object-field_knowledge_object_image'
-  $field_instances['node-knowledge_object-field_knowledge_object_image'] = array(
+  // Exported field_instance: 'node-knowledge_object-field_ko_image'
+  $field_instances['node-knowledge_object-field_ko_image'] = array(
     'bundle' => 'knowledge_object',
     'deleted' => 0,
     'description' => '',
@@ -194,7 +194,7 @@ function collabco_knowledge_feature_field_default_field_instances() {
       ),
     ),
     'entity_type' => 'node',
-    'field_name' => 'field_knowledge_object_image',
+    'field_name' => 'field_ko_image',
     'label' => 'Knowledge Object Image',
     'required' => 0,
     'settings' => array(
@@ -274,8 +274,8 @@ function collabco_knowledge_feature_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-knowledge_object-field_license'
-  $field_instances['node-knowledge_object-field_license'] = array(
+  // Exported field_instance: 'node-knowledge_object-field_ko_license'
+  $field_instances['node-knowledge_object-field_ko_license'] = array(
     'bundle' => 'knowledge_object',
     'default_value' => array(
       0 => array(
@@ -300,7 +300,7 @@ function collabco_knowledge_feature_field_default_field_instances() {
       ),
     ),
     'entity_type' => 'node',
-    'field_name' => 'field_license',
+    'field_name' => 'field_ko_license',
     'label' => 'License',
     'required' => 1,
     'settings' => array(

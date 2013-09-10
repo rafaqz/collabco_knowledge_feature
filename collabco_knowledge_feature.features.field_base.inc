@@ -10,13 +10,13 @@
 function collabco_knowledge_feature_field_default_field_bases() {
   $field_bases = array();
 
-  // Exported field_base: 'field_author_or_source'
-  $field_bases['field_author_or_source'] = array(
+  // Exported field_base: 'field_ko_source'
+  $field_bases['field_ko_source'] = array(
     'active' => 1,
     'cardinality' => 1,
     'deleted' => 0,
     'entity_types' => array(),
-    'field_name' => 'field_author_or_source',
+    'field_name' => 'field_ko_source',
     'foreign keys' => array(
       'format' => array(
         'columns' => array(
@@ -40,13 +40,13 @@ function collabco_knowledge_feature_field_default_field_bases() {
     'type' => 'text',
   );
 
-  // Exported field_base: 'field_file_or_media'
-  $field_bases['field_file_or_media'] = array(
+  // Exported field_base: 'field_ko_file'
+  $field_bases['field_ko_file'] = array(
     'active' => 1,
     'cardinality' => -1,
     'deleted' => 0,
     'entity_types' => array(),
-    'field_name' => 'field_file_or_media',
+    'field_name' => 'field_ko_file',
     'foreign keys' => array(
       'fid' => array(
         'columns' => array(
@@ -71,13 +71,13 @@ function collabco_knowledge_feature_field_default_field_bases() {
     'type' => 'file',
   );
 
-  // Exported field_base: 'field_knowledge_object_image'
-  $field_bases['field_knowledge_object_image'] = array(
+  // Exported field_base: 'field_ko_image'
+  $field_bases['field_ko_image'] = array(
     'active' => 1,
     'cardinality' => 1,
     'deleted' => 0,
     'entity_types' => array(),
-    'field_name' => 'field_knowledge_object_image',
+    'field_name' => 'field_ko_image',
     'foreign keys' => array(
       'fid' => array(
         'columns' => array(
@@ -133,13 +133,13 @@ function collabco_knowledge_feature_field_default_field_bases() {
     'type' => 'link_field',
   );
 
-  // Exported field_base: 'field_license'
-  $field_bases['field_license'] = array(
+  // Exported field_base: 'field_ko_license'
+  $field_bases['field_ko_license'] = array(
     'active' => 1,
     'cardinality' => 1,
     'deleted' => 0,
     'entity_types' => array(),
-    'field_name' => 'field_license',
+    'field_name' => 'field_ko_license',
     'foreign keys' => array(),
     'indexes' => array(
       'licence' => array(
