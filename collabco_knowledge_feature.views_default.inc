@@ -74,18 +74,6 @@ function collabco_knowledge_feature_views_default_views() {
   $handler->display->display_options['fields']['body']['settings'] = array(
     'trim_length' => '50',
   );
-  /* Field: Content: Knowledge Object Image */
-  $handler->display->display_options['fields']['field_ko_image']['id'] = 'field_ko_image';
-  $handler->display->display_options['fields']['field_ko_image']['table'] = 'field_data_field_ko_image';
-  $handler->display->display_options['fields']['field_ko_image']['field'] = 'field_ko_image';
-  $handler->display->display_options['fields']['field_ko_image']['label'] = '';
-  $handler->display->display_options['fields']['field_ko_image']['exclude'] = TRUE;
-  $handler->display->display_options['fields']['field_ko_image']['element_label_colon'] = FALSE;
-  $handler->display->display_options['fields']['field_ko_image']['click_sort_column'] = 'fid';
-  $handler->display->display_options['fields']['field_ko_image']['settings'] = array(
-    'image_style' => 'content_thumb',
-    'image_link' => 'content',
-  );
   /* Field: Broken/missing handler */
   $handler->display->display_options['fields']['field_ko_image']['id'] = 'field_ko_image';
   $handler->display->display_options['fields']['field_ko_image']['table'] = 'field_data_field_ko_image';
@@ -281,13 +269,11 @@ function collabco_knowledge_feature_views_default_views() {
   $handler->display->display_options['fields']['term_node_tid']['vocabularies'] = array(
     'knowledge_object_categories' => 'knowledge_object_categories',
   );
-  /* Field: Profile: Website */
+  /* Field: Broken/missing handler */
   $handler->display->display_options['fields']['field_ko_external_link']['id'] = 'field_ko_external_link';
   $handler->display->display_options['fields']['field_ko_external_link']['table'] = 'field_data_field_ko_external_link';
   $handler->display->display_options['fields']['field_ko_external_link']['field'] = 'field_ko_external_link';
   $handler->display->display_options['fields']['field_ko_external_link']['label'] = 'External Link';
-  $handler->display->display_options['fields']['field_ko_external_link']['click_sort_column'] = 'url';
-  $handler->display->display_options['fields']['field_ko_external_link']['delta_offset'] = '0';
   /* Field: Content: File or Media */
   $handler->display->display_options['fields']['field_ko_file']['id'] = 'field_ko_file';
   $handler->display->display_options['fields']['field_ko_file']['table'] = 'field_data_field_ko_file';
@@ -310,11 +296,10 @@ function collabco_knowledge_feature_views_default_views() {
   $handler->display->display_options['fields']['created']['field'] = 'created';
   $handler->display->display_options['fields']['created']['label'] = 'Date posted';
   $handler->display->display_options['fields']['created']['date_format'] = 'long';
-  /* Field: Content: License */
+  /* Field: Broken/missing handler */
   $handler->display->display_options['fields']['field_ko_license']['id'] = 'field_ko_license';
   $handler->display->display_options['fields']['field_ko_license']['table'] = 'field_data_field_ko_license';
   $handler->display->display_options['fields']['field_ko_license']['field'] = 'field_ko_license';
-  $handler->display->display_options['fields']['field_ko_license']['type'] = 'creative_commons_large_image';
   /* Sort criterion: Content: Post date */
   $handler->display->display_options['sorts']['created']['id'] = 'created';
   $handler->display->display_options['sorts']['created']['table'] = 'node';

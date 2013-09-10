@@ -90,10 +90,10 @@ function collabco_knowledge_feature_strongarm() {
     'extra_fields' => array(
       'form' => array(
         'title' => array(
-          'weight' => '1',
+          'weight' => '0',
         ),
         'path' => array(
-          'weight' => '11',
+          'weight' => '4',
         ),
       ),
       'display' => array(),

@@ -43,6 +43,51 @@ function collabco_knowledge_feature_field_default_field_instances() {
     ),
   );
 
+  // Exported field_instance: 'node-conversation-field_ko_ref'
+  $field_instances['node-conversation-field_ko_ref'] = array(
+    'bundle' => 'conversation',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'entityreference',
+        'settings' => array(
+          'link' => FALSE,
+        ),
+        'type' => 'entityreference_label',
+        'weight' => 2,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'entityconnect_unload_add' => 0,
+    'entityconnect_unload_edit' => 0,
+    'field_name' => 'field_ko_ref',
+    'label' => 'Attachment',
+    'required' => 0,
+    'settings' => array(
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'entityreference',
+      'settings' => array(
+        'match_operator' => 'CONTAINS',
+        'path' => '',
+        'size' => 60,
+      ),
+      'type' => 'entityreference_autocomplete',
+      'weight' => 33,
+    ),
+  );
+
   // Exported field_instance: 'node-knowledge_object-body'
   $field_instances['node-knowledge_object-body'] = array(
     'bundle' => 'knowledge_object',
@@ -72,48 +117,33 @@ function collabco_knowledge_feature_field_default_field_instances() {
     'label' => 'Description',
     'required' => 1,
     'settings' => array(
-      'display_summary' => 1,
-      'text_processing' => 1,
-      'user_register_form' => FALSE,
-    ),
-    'widget' => array(
-      'active' => 1,
-      'module' => 'text',
-      'settings' => array(
-        'rows' => 20,
-        'summary_rows' => 5,
+      'better_formats' => array(
+        'allowed_formats' => array(
+          'filtered_html' => 'filtered_html',
+          'full_html' => 'full_html',
+          'php_code' => 'php_code',
+          'plain_text' => 'plain_text',
+        ),
+        'allowed_formats_toggle' => 0,
+        'default_order_toggle' => 0,
+        'default_order_wrapper' => array(
+          'formats' => array(
+            'filtered_html' => array(
+              'weight' => 0,
+            ),
+            'full_html' => array(
+              'weight' => 0,
+            ),
+            'php_code' => array(
+              'weight' => 11,
+            ),
+            'plain_text' => array(
+              'weight' => 10,
+            ),
+          ),
+        ),
       ),
-      'type' => 'text_textarea_with_summary',
-      'weight' => 10,
-    ),
-  );
-
-  // Exported field_instance: 'node-knowledge_object-field_ko_source'
-  $field_instances['node-knowledge_object-field_ko_source'] = array(
-    'bundle' => 'knowledge_object',
-    'default_value' => NULL,
-    'deleted' => 0,
-    'description' => '',
-    'display' => array(
-      'default' => array(
-        'label' => 'above',
-        'module' => 'text',
-        'settings' => array(),
-        'type' => 'text_default',
-        'weight' => 8,
-      ),
-      'teaser' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
-    ),
-    'entity_type' => 'node',
-    'field_name' => 'field_ko_source',
-    'label' => 'Author or Source',
-    'required' => 0,
-    'settings' => array(
+      'display_summary' => 0,
       'text_processing' => 0,
       'user_register_form' => FALSE,
     ),
@@ -121,10 +151,11 @@ function collabco_knowledge_feature_field_default_field_instances() {
       'active' => 1,
       'module' => 'text',
       'settings' => array(
-        'size' => 60,
+        'rows' => 5,
+        'summary_rows' => 5,
       ),
-      'type' => 'text_textfield',
-      'weight' => 4,
+      'type' => 'text_textarea_with_summary',
+      'weight' => 1,
     ),
   );
 
@@ -166,62 +197,12 @@ function collabco_knowledge_feature_field_default_field_instances() {
         'progress_indicator' => 'bar',
       ),
       'type' => 'file_generic',
-      'weight' => 7,
+      'weight' => 2,
     ),
   );
 
-  // Exported field_instance: 'node-knowledge_object-field_ko_image'
-  $field_instances['node-knowledge_object-field_ko_image'] = array(
-    'bundle' => 'knowledge_object',
-    'deleted' => 0,
-    'description' => '',
-    'display' => array(
-      'default' => array(
-        'label' => 'above',
-        'module' => 'image',
-        'settings' => array(
-          'image_link' => '',
-          'image_style' => '',
-        ),
-        'type' => 'image',
-        'weight' => 7,
-      ),
-      'teaser' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
-    ),
-    'entity_type' => 'node',
-    'field_name' => 'field_ko_image',
-    'label' => 'Knowledge Object Image',
-    'required' => 0,
-    'settings' => array(
-      'alt_field' => 0,
-      'default_image' => 0,
-      'file_directory' => '',
-      'file_extensions' => 'png gif jpg jpeg',
-      'max_filesize' => '',
-      'max_resolution' => '',
-      'min_resolution' => '',
-      'title_field' => 0,
-      'user_register_form' => FALSE,
-    ),
-    'widget' => array(
-      'active' => 1,
-      'module' => 'image',
-      'settings' => array(
-        'preview_image_style' => 'thumbnail',
-        'progress_indicator' => 'throbber',
-      ),
-      'type' => 'image_image',
-      'weight' => 5,
-    ),
-  );
-
-  // Exported field_instance: 'node-knowledge_object-field_ko_external_link'
-  $field_instances['node-knowledge_object-field_ko_external_link'] = array(
+  // Exported field_instance: 'node-knowledge_object-og_group_ref'
+  $field_instances['node-knowledge_object-og_group_ref'] = array(
     'bundle' => 'knowledge_object',
     'default_value' => NULL,
     'deleted' => 0,
@@ -229,10 +210,10 @@ function collabco_knowledge_feature_field_default_field_instances() {
     'display' => array(
       'default' => array(
         'label' => 'above',
-        'module' => 'link',
+        'module' => 'og_ui',
         'settings' => array(),
-        'type' => 'link_default',
-        'weight' => 9,
+        'type' => 'og_list_default',
+        'weight' => 10,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -242,88 +223,50 @@ function collabco_knowledge_feature_field_default_field_instances() {
       ),
     ),
     'entity_type' => 'node',
-    'field_name' => 'field_ko_external_link',
-    'label' => 'External Link',
-    'required' => 0,
+    'field_name' => 'og_group_ref',
+    'label' => 'Groups audience',
+    'required' => FALSE,
     'settings' => array(
-      'attributes' => array(
-        'class' => '',
-        'configurable_title' => 0,
-        'rel' => '',
-        'target' => 'default',
-        'title' => '',
+      'behaviors' => array(
+        'og_widget' => array(
+          'admin' => array(
+            'widget_type' => 'entityreference_autocomplete',
+          ),
+          'default' => array(
+            'widget_type' => 'options_select',
+          ),
+          'status' => TRUE,
+        ),
       ),
-      'display' => array(
-        'url_cutoff' => 80,
-      ),
-      'enable_tokens' => 1,
-      'rel_remove' => 'default',
-      'title' => 'optional',
-      'title_maxlength' => 128,
-      'title_value' => '',
-      'url' => 0,
       'user_register_form' => FALSE,
-      'validate_url' => 0,
     ),
-    'widget' => array(
-      'active' => 0,
-      'module' => 'link',
-      'settings' => array(),
-      'type' => 'link_field',
-      'weight' => 12,
-    ),
-  );
-
-  // Exported field_instance: 'node-knowledge_object-field_ko_license'
-  $field_instances['node-knowledge_object-field_ko_license'] = array(
-    'bundle' => 'knowledge_object',
-    'default_value' => array(
-      0 => array(
-        'licence' => 1,
-      ),
-    ),
-    'deleted' => 0,
-    'description' => '',
-    'display' => array(
-      'default' => array(
-        'label' => 'above',
-        'module' => 'creative_commons',
-        'settings' => array(),
-        'type' => 'creative_commons_small_image',
-        'weight' => 6,
+    'view modes' => array(
+      'full' => array(
+        'custom settings' => FALSE,
+        'label' => 'Full',
+        'type' => 'og_list_default',
       ),
       'teaser' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
+        'custom settings' => FALSE,
+        'label' => 'Teaser',
+        'type' => 'og_list_default',
       ),
     ),
-    'entity_type' => 'node',
-    'field_name' => 'field_ko_license',
-    'label' => 'License',
-    'required' => 1,
-    'settings' => array(
-      'user_register_form' => FALSE,
-    ),
     'widget' => array(
-      'active' => 0,
-      'module' => 'creative_commons',
+      'module' => 'og',
       'settings' => array(),
-      'type' => 'radios',
-      'weight' => 8,
+      'type' => 'og_complex',
+      'weight' => 3,
     ),
   );
 
   // Translatables
   // Included for use with string extractors like potx.
-  t('Author or Source');
+  t('Attachment');
   t('Comment');
   t('Description');
-  t('External Link');
   t('File or Media');
-  t('Knowledge Object Image');
-  t('License');
+  t('Groups audience');
   t('Upload files or media to share with one or more groups');
 
   return $field_instances;

@@ -10,36 +10,6 @@
 function collabco_knowledge_feature_field_default_field_bases() {
   $field_bases = array();
 
-  // Exported field_base: 'field_ko_source'
-  $field_bases['field_ko_source'] = array(
-    'active' => 1,
-    'cardinality' => 1,
-    'deleted' => 0,
-    'entity_types' => array(),
-    'field_name' => 'field_ko_source',
-    'foreign keys' => array(
-      'format' => array(
-        'columns' => array(
-          'format' => 'format',
-        ),
-        'table' => 'filter_format',
-      ),
-    ),
-    'indexes' => array(
-      'format' => array(
-        0 => 'format',
-      ),
-    ),
-    'locked' => 0,
-    'module' => 'text',
-    'settings' => array(
-      'max_length' => 255,
-      'profile2_private' => FALSE,
-    ),
-    'translatable' => 0,
-    'type' => 'text',
-  );
-
   // Exported field_base: 'field_ko_file'
   $field_bases['field_ko_file'] = array(
     'active' => 1,
@@ -71,99 +41,48 @@ function collabco_knowledge_feature_field_default_field_bases() {
     'type' => 'file',
   );
 
-  // Exported field_base: 'field_ko_image'
-  $field_bases['field_ko_image'] = array(
+  // Exported field_base: 'field_ko_ref'
+  $field_bases['field_ko_ref'] = array(
     'active' => 1,
-    'cardinality' => 1,
+    'cardinality' => -1,
     'deleted' => 0,
     'entity_types' => array(),
-    'field_name' => 'field_ko_image',
+    'field_name' => 'field_ko_ref',
     'foreign keys' => array(
-      'fid' => array(
+      'node' => array(
         'columns' => array(
-          'fid' => 'fid',
+          'target_id' => 'nid',
         ),
-        'table' => 'file_managed',
+        'table' => 'node',
       ),
     ),
     'indexes' => array(
-      'fid' => array(
-        0 => 'fid',
+      'target_id' => array(
+        0 => 'target_id',
       ),
     ),
     'locked' => 0,
-    'module' => 'image',
+    'module' => 'entityreference',
     'settings' => array(
-      'default_image' => 0,
+      'handler' => 'base',
+      'handler_settings' => array(
+        'behaviors' => array(
+          'views-select-list' => array(
+            'status' => 0,
+          ),
+        ),
+        'sort' => array(
+          'type' => 'none',
+        ),
+        'target_bundles' => array(
+          'knowledge_object' => 'knowledge_object',
+        ),
+      ),
       'profile2_private' => FALSE,
-      'uri_scheme' => 'private',
+      'target_type' => 'node',
     ),
     'translatable' => 0,
-    'type' => 'image',
-  );
-
-  // Exported field_base: 'field_ko_external_link'
-  $field_bases['field_ko_external_link'] = array(
-    'active' => 1,
-    'cardinality' => 1,
-    'deleted' => 0,
-    'entity_types' => array(),
-    'field_name' => 'field_ko_external_link',
-    'foreign keys' => array(),
-    'indexes' => array(),
-    'locked' => 0,
-    'module' => 'link',
-    'settings' => array(
-      'attributes' => array(
-        'class' => '',
-        'rel' => '',
-        'target' => 'default',
-      ),
-      'display' => array(
-        'url_cutoff' => 80,
-      ),
-      'enable_tokens' => 1,
-      'profile2_private' => FALSE,
-      'title' => 'optional',
-      'title_maxlength' => 128,
-      'title_value' => '',
-      'url' => 0,
-    ),
-    'translatable' => 0,
-    'type' => 'link_field',
-  );
-
-  // Exported field_base: 'field_ko_license'
-  $field_bases['field_ko_license'] = array(
-    'active' => 1,
-    'cardinality' => 1,
-    'deleted' => 0,
-    'entity_types' => array(),
-    'field_name' => 'field_ko_license',
-    'foreign keys' => array(),
-    'indexes' => array(
-      'licence' => array(
-        0 => 'licence',
-      ),
-    ),
-    'locked' => 0,
-    'module' => 'creative_commons',
-    'settings' => array(
-      'allowed_values' => array(
-        1 => 1,
-        8 => 8,
-        9 => 9,
-        2 => 2,
-        3 => 3,
-        4 => 4,
-        5 => 5,
-        6 => 6,
-        7 => 7,
-      ),
-      'jurisdiction' => '',
-    ),
-    'translatable' => 0,
-    'type' => 'creative_commons',
+    'type' => 'entityreference',
   );
 
   return $field_bases;
