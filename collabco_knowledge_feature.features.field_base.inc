@@ -35,6 +35,7 @@ function collabco_knowledge_feature_field_default_field_bases() {
     'settings' => array(
       'display_default' => 1,
       'display_field' => 0,
+      'profile2_private' => FALSE,
       'uri_scheme' => 'private',
     ),
     'translatable' => 0,

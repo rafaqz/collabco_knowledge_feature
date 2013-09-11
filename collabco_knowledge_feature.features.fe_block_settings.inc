@@ -120,5 +120,59 @@ function collabco_knowledge_feature_default_fe_block_settings() {
     'visibility' => 0,
   );
 
+  $export['views-recent_files-block'] = array(
+    'cache' => -1,
+    'css_class' => 'sidetheme',
+    'custom' => 0,
+    'delta' => 'recent_files-block',
+    'module' => 'views',
+    'node_types' => array(),
+    'pages' => '',
+    'roles' => array(),
+    'themes' => array(
+      'custom_theme' => array(
+        'region' => 'sidebar_second',
+        'status' => 1,
+        'theme' => 'custom_theme',
+        'weight' => 0,
+      ),
+      'seven' => array(
+        'region' => '',
+        'status' => 0,
+        'theme' => 'seven',
+        'weight' => 0,
+      ),
+    ),
+    'title' => 'Recent Files',
+    'visibility' => 0,
+  );
+
+  $export['views-recent_files-group_block'] = array(
+    'cache' => -1,
+    'css_class' => 'sidetheme',
+    'custom' => 0,
+    'delta' => 'recent_files-group_block',
+    'module' => 'views',
+    'node_types' => array(),
+    'pages' => '',
+    'roles' => array(),
+    'themes' => array(
+      'custom_theme' => array(
+        'region' => 'sidebar_second',
+        'status' => 1,
+        'theme' => 'custom_theme',
+        'weight' => 0,
+      ),
+      'seven' => array(
+        'region' => '',
+        'status' => 0,
+        'theme' => 'seven',
+        'weight' => 0,
+      ),
+    ),
+    'title' => 'Recent Files',
+    'visibility' => 0,
+  );
+
   return $export;
 }

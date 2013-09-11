@@ -184,7 +184,7 @@ function collabco_knowledge_feature_field_default_field_instances() {
     'label' => 'File or Media',
     'required' => 0,
     'settings' => array(
-      'description_field' => 1,
+      'description_field' => 0,
       'file_directory' => 'knowledge_repository',
       'file_extensions' => 'txt pdf xls xlsx doc docx odp odf ppt pptx zip jpg jpeg gif svg tif tiff avi eps mp3 m3u mp4 movie ogg csv',
       'max_filesize' => '',
