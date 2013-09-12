@@ -131,8 +131,8 @@ function collabco_knowledge_feature_default_fe_block_settings() {
     'roles' => array(),
     'themes' => array(
       'custom_theme' => array(
-        'region' => 'sidebar_second',
-        'status' => 1,
+        'region' => '',
+        'status' => 0,
         'theme' => 'custom_theme',
         'weight' => 0,
       ),
@@ -158,8 +158,8 @@ function collabco_knowledge_feature_default_fe_block_settings() {
     'roles' => array(),
     'themes' => array(
       'custom_theme' => array(
-        'region' => 'sidebar_second',
-        'status' => 1,
+        'region' => '',
+        'status' => 0,
         'theme' => 'custom_theme',
         'weight' => 0,
       ),
