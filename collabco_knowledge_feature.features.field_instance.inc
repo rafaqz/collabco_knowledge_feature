@@ -48,7 +48,7 @@ function collabco_knowledge_feature_field_default_field_instances() {
     'bundle' => 'conversation',
     'default_value' => NULL,
     'deleted' => 0,
-    'description' => '',
+    'description' => 'Attach an existing file or upload a new one.',
     'display' => array(
       'default' => array(
         'label' => 'above',
@@ -70,7 +70,7 @@ function collabco_knowledge_feature_field_default_field_instances() {
     'entityconnect_unload_add' => 0,
     'entityconnect_unload_edit' => 0,
     'field_name' => 'field_ko_ref',
-    'label' => 'Attachment',
+    'label' => 'Attach a file',
     'required' => 0,
     'settings' => array(
       'user_register_form' => FALSE,
@@ -81,7 +81,7 @@ function collabco_knowledge_feature_field_default_field_instances() {
       'settings' => array(
         'match_operator' => 'CONTAINS',
         'path' => '',
-        'size' => 60,
+        'size' => 40,
       ),
       'type' => 'entityreference_autocomplete',
       'weight' => 33,
@@ -194,7 +194,7 @@ function collabco_knowledge_feature_field_default_field_instances() {
       'active' => 1,
       'module' => 'file',
       'settings' => array(
-        'progress_indicator' => 'bar',
+        'progress_indicator' => 'throbber',
       ),
       'type' => 'file_generic',
       'weight' => 2,
@@ -223,17 +223,19 @@ function collabco_knowledge_feature_field_default_field_instances() {
       ),
     ),
     'entity_type' => 'node',
+    'entityconnect_unload_add' => 1,
+    'entityconnect_unload_edit' => 1,
     'field_name' => 'og_group_ref',
-    'label' => 'Groups audience',
-    'required' => FALSE,
+    'label' => 'Only make this available to the group(s):',
+    'required' => 0,
     'settings' => array(
       'behaviors' => array(
         'og_widget' => array(
           'admin' => array(
-            'widget_type' => 'entityreference_autocomplete',
+            'widget_type' => 'options_buttons',
           ),
           'default' => array(
-            'widget_type' => 'options_select',
+            'widget_type' => 'options_buttons',
           ),
           'status' => TRUE,
         ),
@@ -253,6 +255,7 @@ function collabco_knowledge_feature_field_default_field_instances() {
       ),
     ),
     'widget' => array(
+      'active' => 0,
       'module' => 'og',
       'settings' => array(),
       'type' => 'og_complex',
@@ -262,11 +265,12 @@ function collabco_knowledge_feature_field_default_field_instances() {
 
   // Translatables
   // Included for use with string extractors like potx.
-  t('Attachment');
+  t('Attach a file');
+  t('Attach an existing file or upload a new one.');
   t('Comment');
   t('Description');
   t('File or Media');
-  t('Groups audience');
+  t('Only make this available to the group(s):');
   t('Upload files or media to share with one or more groups');
 
   return $field_instances;
