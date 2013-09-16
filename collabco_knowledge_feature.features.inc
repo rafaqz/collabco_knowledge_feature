@@ -9,6 +9,10 @@
  */
 function collabco_knowledge_feature_ctools_plugin_api() {
   list($module, $api) = func_get_args();
+  if ($module == "context" && $api == "context") {
+    return array("version" => "3");
+  }
+  list($module, $api) = func_get_args();
   if ($module == "strongarm" && $api == "strongarm") {
     return array("version" => "1");
   }
@@ -59,7 +63,7 @@ function collabco_knowledge_feature_fe_nodequeue_export_fields() {
 function collabco_knowledge_feature_node_info() {
   $items = array(
     'knowledge_object' => array(
-      'name' => t('Knowledge Object'),
+      'name' => t('File'),
       'base' => 'node_content',
       'description' => '',
       'has_title' => '1',

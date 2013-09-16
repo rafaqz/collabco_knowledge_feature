@@ -122,17 +122,17 @@ function collabco_knowledge_feature_default_fe_block_settings() {
 
   $export['views-recent_files-block'] = array(
     'cache' => -1,
-    'css_class' => 'sidetheme',
+    'css_class' => 'sidetheme paddingreset',
     'custom' => 0,
     'delta' => 'recent_files-block',
     'module' => 'views',
     'node_types' => array(),
-    'pages' => '',
+    'pages' => 'group/*',
     'roles' => array(),
     'themes' => array(
       'custom_theme' => array(
-        'region' => '',
-        'status' => 0,
+        'region' => 'sidebar_second',
+        'status' => 1,
         'theme' => 'custom_theme',
         'weight' => 0,
       ),
@@ -149,7 +149,7 @@ function collabco_knowledge_feature_default_fe_block_settings() {
 
   $export['views-recent_files-group_block'] = array(
     'cache' => -1,
-    'css_class' => 'sidetheme',
+    'css_class' => 'sidetheme paddingreset',
     'custom' => 0,
     'delta' => 'recent_files-group_block',
     'module' => 'views',

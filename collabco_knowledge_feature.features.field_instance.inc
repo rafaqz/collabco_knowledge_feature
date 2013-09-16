@@ -48,13 +48,13 @@ function collabco_knowledge_feature_field_default_field_instances() {
     'bundle' => 'conversation',
     'default_value' => NULL,
     'deleted' => 0,
-    'description' => 'Attach an existing file or upload a new one.',
+    'description' => '',
     'display' => array(
       'default' => array(
-        'label' => 'above',
+        'label' => 'inline',
         'module' => 'entityreference',
         'settings' => array(
-          'link' => FALSE,
+          'link' => 1,
         ),
         'type' => 'entityreference_label',
         'weight' => 2,
@@ -68,7 +68,7 @@ function collabco_knowledge_feature_field_default_field_instances() {
     ),
     'entity_type' => 'node',
     'entityconnect_unload_add' => 0,
-    'entityconnect_unload_edit' => 0,
+    'entityconnect_unload_edit' => 1,
     'field_name' => 'field_ko_ref',
     'label' => 'Attach a file',
     'required' => 0,
@@ -77,13 +77,9 @@ function collabco_knowledge_feature_field_default_field_instances() {
     ),
     'widget' => array(
       'active' => 1,
-      'module' => 'entityreference',
-      'settings' => array(
-        'match_operator' => 'CONTAINS',
-        'path' => '',
-        'size' => 40,
-      ),
-      'type' => 'entityreference_autocomplete',
+      'module' => 'options',
+      'settings' => array(),
+      'type' => 'options_select',
       'weight' => 33,
     ),
   );
@@ -226,7 +222,7 @@ function collabco_knowledge_feature_field_default_field_instances() {
     'entityconnect_unload_add' => 1,
     'entityconnect_unload_edit' => 1,
     'field_name' => 'og_group_ref',
-    'label' => 'Only make this available to the group(s):',
+    'label' => 'Only made available to the group(s)',
     'required' => 0,
     'settings' => array(
       'behaviors' => array(
@@ -266,11 +262,10 @@ function collabco_knowledge_feature_field_default_field_instances() {
   // Translatables
   // Included for use with string extractors like potx.
   t('Attach a file');
-  t('Attach an existing file or upload a new one.');
   t('Comment');
   t('Description');
   t('File or Media');
-  t('Only make this available to the group(s):');
+  t('Only made available to the group(s)');
   t('Upload files or media to share with one or more groups');
 
   return $field_instances;
