@@ -1,6 +1,6 @@
 name = Collabco Knowledge Feature
 core = 7.x
-package = Other
+package = Collabco
 php = 5.2.4
 version = unknown
 project = collabco_knowledge_feature
@@ -40,6 +40,7 @@ features[fe_nodequeue][] = innovation_at_work
 features[features_api][] = api:2
 features[field_base][] = field_ko_file
 features[field_base][] = field_ko_ref
+features[field_instance][] = comment-comment_node_conversation-field_ko_ref
 features[field_instance][] = comment-comment_node_knowledge_object-comment_body
 features[field_instance][] = node-conversation-field_ko_ref
 features[field_instance][] = node-knowledge_object-body
