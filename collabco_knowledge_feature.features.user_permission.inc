@@ -14,7 +14,9 @@ function collabco_knowledge_feature_user_default_permissions() {
   $permissions['create knowledge_object content'] = array(
     'name' => 'create knowledge_object content',
     'roles' => array(
-      'authenticated user' => 'authenticated user',
+      'Admin' => 'Admin',
+      'Community Moderator' => 'Community Moderator',
+      'Content Manager' => 'Content Manager',
     ),
     'module' => 'node',
   );
@@ -22,7 +24,11 @@ function collabco_knowledge_feature_user_default_permissions() {
   // Exported permission: delete any knowledge_object content.
   $permissions['delete any knowledge_object content'] = array(
     'name' => 'delete any knowledge_object content',
-    'roles' => array(),
+    'roles' => array(
+      'Admin' => 'Admin',
+      'Community Moderator' => 'Community Moderator',
+      'Content Manager' => 'Content Manager',
+    ),
     'module' => 'node',
   );
 
@@ -38,7 +44,11 @@ function collabco_knowledge_feature_user_default_permissions() {
   // Exported permission: edit any knowledge_object content.
   $permissions['edit any knowledge_object content'] = array(
     'name' => 'edit any knowledge_object content',
-    'roles' => array(),
+    'roles' => array(
+      'Admin' => 'Admin',
+      'Community Moderator' => 'Community Moderator',
+      'Content Manager' => 'Content Manager',
+    ),
     'module' => 'node',
   );
 
@@ -58,6 +68,7 @@ function collabco_knowledge_feature_user_default_permissions() {
       'Admin' => 'Admin',
       'Community Moderator' => 'Community Moderator',
       'Content Manager' => 'Content Manager',
+      'authenticated user' => 'authenticated user',
     ),
     'module' => 'entityconnect',
   );
@@ -69,6 +80,7 @@ function collabco_knowledge_feature_user_default_permissions() {
       'Admin' => 'Admin',
       'Community Moderator' => 'Community Moderator',
       'Content Manager' => 'Content Manager',
+      'authenticated user' => 'authenticated user',
     ),
     'module' => 'entityconnect',
   );
