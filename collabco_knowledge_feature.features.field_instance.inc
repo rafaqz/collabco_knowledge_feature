@@ -257,7 +257,7 @@ function collabco_knowledge_feature_field_default_field_instances() {
     'entityconnect_unload_add' => 1,
     'entityconnect_unload_edit' => 1,
     'field_name' => 'og_group_ref',
-    'label' => 'Only made available to the group(s)',
+    'label' => 'Make this available only to the following groups',
     'required' => 0,
     'settings' => array(
       'behaviors' => array(
@@ -301,7 +301,7 @@ function collabco_knowledge_feature_field_default_field_instances() {
   t('Comment');
   t('Description');
   t('File or Media');
-  t('Only made available to the group(s)');
+  t('Make this available only to the following groups');
   t('Upload files or media to share with one or more groups');
 
   return $field_instances;
