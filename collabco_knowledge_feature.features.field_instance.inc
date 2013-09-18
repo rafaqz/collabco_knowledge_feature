@@ -237,7 +237,7 @@ function collabco_knowledge_feature_field_default_field_instances() {
     'bundle' => 'knowledge_object',
     'default_value' => NULL,
     'deleted' => 0,
-    'description' => '',
+    'description' => 'If you do not select any groups, then it will be visible to all members.',
     'display' => array(
       'default' => array(
         'label' => 'above',
@@ -301,6 +301,7 @@ function collabco_knowledge_feature_field_default_field_instances() {
   t('Comment');
   t('Description');
   t('File or Media');
+  t('If you do not select any groups, then it will be visible to all members.');
   t('Make this available only to the following groups');
   t('Upload files or media to share with one or more groups');
 
