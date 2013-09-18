@@ -12,7 +12,7 @@ function collabco_knowledge_feature_views_default_views() {
 
   $view = new view();
   $view->name = 'innovation_at_work';
-  $view->description = 'Display a list of all nodes in queue \'Innovation at Work\'';
+  $view->description = 'Old, not currently used. shows knowledge objects.';
   $view->tag = 'nodequeue';
   $view->base_table = 'node';
   $view->human_name = 'Innovation at Work';
@@ -74,13 +74,6 @@ function collabco_knowledge_feature_views_default_views() {
   $handler->display->display_options['fields']['body']['settings'] = array(
     'trim_length' => '50',
   );
-  /* Field: Broken/missing handler */
-  $handler->display->display_options['fields']['field_ko_image']['id'] = 'field_ko_image';
-  $handler->display->display_options['fields']['field_ko_image']['table'] = 'field_data_field_ko_image';
-  $handler->display->display_options['fields']['field_ko_image']['field'] = 'field_ko_image';
-  $handler->display->display_options['fields']['field_ko_image']['label'] = '';
-  $handler->display->display_options['fields']['field_ko_image']['exclude'] = TRUE;
-  $handler->display->display_options['fields']['field_ko_image']['element_label_colon'] = FALSE;
   /* Field: Global: Custom text */
   $handler->display->display_options['fields']['nothing']['id'] = 'nothing';
   $handler->display->display_options['fields']['nothing']['table'] = 'views';
@@ -117,8 +110,8 @@ function collabco_knowledge_feature_views_default_views() {
 
   $view = new view();
   $view->name = 'knowledge_repository';
-  $view->description = '';
-  $view->tag = 'default';
+  $view->description = 'Lists all knowledge objects. Out of date and not used currently';
+  $view->tag = 'Knowledge Feature';
   $view->base_table = 'node';
   $view->human_name = 'Knowledge Repository';
   $view->core = 7;
@@ -269,11 +262,6 @@ function collabco_knowledge_feature_views_default_views() {
   $handler->display->display_options['fields']['term_node_tid']['vocabularies'] = array(
     'knowledge_object_categories' => 'knowledge_object_categories',
   );
-  /* Field: Broken/missing handler */
-  $handler->display->display_options['fields']['field_ko_external_link']['id'] = 'field_ko_external_link';
-  $handler->display->display_options['fields']['field_ko_external_link']['table'] = 'field_data_field_ko_external_link';
-  $handler->display->display_options['fields']['field_ko_external_link']['field'] = 'field_ko_external_link';
-  $handler->display->display_options['fields']['field_ko_external_link']['label'] = 'External Link';
   /* Field: Content: File or Media */
   $handler->display->display_options['fields']['field_ko_file']['id'] = 'field_ko_file';
   $handler->display->display_options['fields']['field_ko_file']['table'] = 'field_data_field_ko_file';
@@ -296,10 +284,6 @@ function collabco_knowledge_feature_views_default_views() {
   $handler->display->display_options['fields']['created']['field'] = 'created';
   $handler->display->display_options['fields']['created']['label'] = 'Date posted';
   $handler->display->display_options['fields']['created']['date_format'] = 'long';
-  /* Field: Broken/missing handler */
-  $handler->display->display_options['fields']['field_ko_license']['id'] = 'field_ko_license';
-  $handler->display->display_options['fields']['field_ko_license']['table'] = 'field_data_field_ko_license';
-  $handler->display->display_options['fields']['field_ko_license']['field'] = 'field_ko_license';
   /* Sort criterion: Content: Post date */
   $handler->display->display_options['sorts']['created']['id'] = 'created';
   $handler->display->display_options['sorts']['created']['table'] = 'node';
@@ -390,7 +374,7 @@ function collabco_knowledge_feature_views_default_views() {
   $view = new view();
   $view->name = 'recent_files';
   $view->description = 'List knowledge objects, both openly available and for groups.';
-  $view->tag = 'default';
+  $view->tag = 'Knowledge Feature';
   $view->base_table = 'node';
   $view->human_name = 'Recent Files';
   $view->core = 7;
