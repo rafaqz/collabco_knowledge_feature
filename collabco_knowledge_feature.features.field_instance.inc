@@ -105,7 +105,7 @@ function collabco_knowledge_feature_field_default_field_instances() {
     'entityconnect_unload_add' => 0,
     'entityconnect_unload_edit' => 1,
     'field_name' => 'field_ko_ref',
-    'label' => 'Attach a file',
+    'label' => 'Attachment',
     'required' => 0,
     'settings' => array(
       'user_register_form' => FALSE,
@@ -296,7 +296,6 @@ function collabco_knowledge_feature_field_default_field_instances() {
 
   // Translatables
   // Included for use with string extractors like potx.
-  t('Attach a file');
   t('Attachment');
   t('Comment');
   t('Description');
