@@ -127,7 +127,8 @@ function collabco_knowledge_feature_default_fe_block_settings() {
     'delta' => 'recent_files-block',
     'module' => 'views',
     'node_types' => array(),
-    'pages' => 'group/*',
+    'pages' => 'group/*
+services',
     'roles' => array(),
     'themes' => array(
       'custom_theme' => array(
