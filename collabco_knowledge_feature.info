@@ -78,6 +78,7 @@ features[variable][] = menu_parent_knowledge_object
 features[variable][] = node_options_knowledge_object
 features[variable][] = node_preview_knowledge_object
 features[variable][] = node_submitted_knowledge_object
+features[variable][] = pathauto_node_knowledge_object_pattern
 features[views_view][] = innovation_at_work
 features[views_view][] = knowledge_repository
 features[views_view][] = recent_files

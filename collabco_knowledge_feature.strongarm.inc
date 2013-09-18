@@ -123,7 +123,6 @@ function collabco_knowledge_feature_strongarm() {
   $strongarm->name = 'node_options_knowledge_object';
   $strongarm->value = array(
     0 => 'status',
-    1 => 'revision',
   );
   $export['node_options_knowledge_object'] = $strongarm;
 
@@ -140,6 +139,13 @@ function collabco_knowledge_feature_strongarm() {
   $strongarm->name = 'node_submitted_knowledge_object';
   $strongarm->value = 0;
   $export['node_submitted_knowledge_object'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'pathauto_node_knowledge_object_pattern';
+  $strongarm->value = 'knowledge/[node:title]';
+  $export['pathauto_node_knowledge_object_pattern'] = $strongarm;
 
   return $export;
 }
