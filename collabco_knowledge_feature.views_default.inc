@@ -397,6 +397,7 @@ function collabco_knowledge_feature_views_default_views() {
   $handler->display->display_options['pager']['options']['id'] = '0';
   $handler->display->display_options['pager']['options']['quantity'] = '9';
   $handler->display->display_options['style_plugin'] = 'list';
+  $handler->display->display_options['style_options']['row_class'] = 'row-fluid';
   $handler->display->display_options['style_options']['class'] = 'unstyled';
   $handler->display->display_options['row_plugin'] = 'fields';
   $handler->display->display_options['row_options']['inline'] = array(
@@ -407,6 +408,27 @@ function collabco_knowledge_feature_views_default_views() {
   $handler->display->display_options['relationships']['uid']['id'] = 'uid';
   $handler->display->display_options['relationships']['uid']['table'] = 'node';
   $handler->display->display_options['relationships']['uid']['field'] = 'uid';
+  /* Relationship: Content: File or Media (field_ko_file:fid) */
+  $handler->display->display_options['relationships']['field_ko_file_fid']['id'] = 'field_ko_file_fid';
+  $handler->display->display_options['relationships']['field_ko_file_fid']['table'] = 'field_data_field_ko_file';
+  $handler->display->display_options['relationships']['field_ko_file_fid']['field'] = 'field_ko_file_fid';
+  /* Field: File: Size */
+  $handler->display->display_options['fields']['filesize']['id'] = 'filesize';
+  $handler->display->display_options['fields']['filesize']['table'] = 'file_managed';
+  $handler->display->display_options['fields']['filesize']['field'] = 'filesize';
+  $handler->display->display_options['fields']['filesize']['relationship'] = 'field_ko_file_fid';
+  $handler->display->display_options['fields']['filesize']['label'] = '';
+  $handler->display->display_options['fields']['filesize']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['filesize']['element_label_colon'] = FALSE;
+  /* Field: File: Path */
+  $handler->display->display_options['fields']['uri']['id'] = 'uri';
+  $handler->display->display_options['fields']['uri']['table'] = 'file_managed';
+  $handler->display->display_options['fields']['uri']['field'] = 'uri';
+  $handler->display->display_options['fields']['uri']['relationship'] = 'field_ko_file_fid';
+  $handler->display->display_options['fields']['uri']['label'] = '';
+  $handler->display->display_options['fields']['uri']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['uri']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['uri']['file_download_path'] = TRUE;
   /* Field: Content: Title */
   $handler->display->display_options['fields']['title']['id'] = 'title';
   $handler->display->display_options['fields']['title']['table'] = 'node';
@@ -434,9 +456,13 @@ function collabco_knowledge_feature_views_default_views() {
   $handler->display->display_options['fields']['field_ko_file']['field'] = 'field_ko_file';
   $handler->display->display_options['fields']['field_ko_file']['label'] = '';
   $handler->display->display_options['fields']['field_ko_file']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['field_ko_file']['alter']['alter_text'] = TRUE;
+  $handler->display->display_options['fields']['field_ko_file']['alter']['text'] = 'Download [field_ko_file] [filesize] ';
+  $handler->display->display_options['fields']['field_ko_file']['alter']['make_link'] = TRUE;
+  $handler->display->display_options['fields']['field_ko_file']['alter']['path'] = '[uri]';
+  $handler->display->display_options['fields']['field_ko_file']['alter']['alt'] = 'Download [field_ko_file]';
   $handler->display->display_options['fields']['field_ko_file']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_ko_file']['click_sort_column'] = 'fid';
-  $handler->display->display_options['fields']['field_ko_file']['type'] = 'file_download_link';
   $handler->display->display_options['fields']['field_ko_file']['settings'] = array(
     'text' => 'Download [file:name]',
   );
@@ -514,6 +540,15 @@ function collabco_knowledge_feature_views_default_views() {
   $handler->display->display_options['pager']['type'] = 'some';
   $handler->display->display_options['pager']['options']['items_per_page'] = '5';
   $handler->display->display_options['defaults']['fields'] = FALSE;
+  /* Field: File: Path */
+  $handler->display->display_options['fields']['uri']['id'] = 'uri';
+  $handler->display->display_options['fields']['uri']['table'] = 'file_managed';
+  $handler->display->display_options['fields']['uri']['field'] = 'uri';
+  $handler->display->display_options['fields']['uri']['relationship'] = 'field_ko_file_fid';
+  $handler->display->display_options['fields']['uri']['label'] = '';
+  $handler->display->display_options['fields']['uri']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['uri']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['uri']['file_download_path'] = TRUE;
   /* Field: Content: Title */
   $handler->display->display_options['fields']['title']['id'] = 'title';
   $handler->display->display_options['fields']['title']['table'] = 'node';
@@ -543,9 +578,12 @@ function collabco_knowledge_feature_views_default_views() {
   $handler->display->display_options['fields']['field_ko_file']['field'] = 'field_ko_file';
   $handler->display->display_options['fields']['field_ko_file']['label'] = '';
   $handler->display->display_options['fields']['field_ko_file']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['field_ko_file']['alter']['alter_text'] = TRUE;
+  $handler->display->display_options['fields']['field_ko_file']['alter']['text'] = 'Download';
+  $handler->display->display_options['fields']['field_ko_file']['alter']['make_link'] = TRUE;
+  $handler->display->display_options['fields']['field_ko_file']['alter']['path'] = '[uri]';
   $handler->display->display_options['fields']['field_ko_file']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_ko_file']['click_sort_column'] = 'fid';
-  $handler->display->display_options['fields']['field_ko_file']['type'] = 'file_download_link';
   $handler->display->display_options['fields']['field_ko_file']['settings'] = array(
     'text' => 'Download [file:name]',
   );
@@ -586,7 +624,20 @@ function collabco_knowledge_feature_views_default_views() {
   $handler->display->display_options['relationships']['og_membership_rel']['id'] = 'og_membership_rel';
   $handler->display->display_options['relationships']['og_membership_rel']['table'] = 'node';
   $handler->display->display_options['relationships']['og_membership_rel']['field'] = 'og_membership_rel';
+  /* Relationship: Content: File or Media (field_ko_file:fid) */
+  $handler->display->display_options['relationships']['field_ko_file_fid']['id'] = 'field_ko_file_fid';
+  $handler->display->display_options['relationships']['field_ko_file_fid']['table'] = 'field_data_field_ko_file';
+  $handler->display->display_options['relationships']['field_ko_file_fid']['field'] = 'field_ko_file_fid';
   $handler->display->display_options['defaults']['fields'] = FALSE;
+  /* Field: File: Path */
+  $handler->display->display_options['fields']['uri']['id'] = 'uri';
+  $handler->display->display_options['fields']['uri']['table'] = 'file_managed';
+  $handler->display->display_options['fields']['uri']['field'] = 'uri';
+  $handler->display->display_options['fields']['uri']['relationship'] = 'field_ko_file_fid';
+  $handler->display->display_options['fields']['uri']['label'] = '';
+  $handler->display->display_options['fields']['uri']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['uri']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['uri']['file_download_path'] = TRUE;
   /* Field: Content: Title */
   $handler->display->display_options['fields']['title']['id'] = 'title';
   $handler->display->display_options['fields']['title']['table'] = 'node';
@@ -616,9 +667,12 @@ function collabco_knowledge_feature_views_default_views() {
   $handler->display->display_options['fields']['field_ko_file']['field'] = 'field_ko_file';
   $handler->display->display_options['fields']['field_ko_file']['label'] = '';
   $handler->display->display_options['fields']['field_ko_file']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['field_ko_file']['alter']['alter_text'] = TRUE;
+  $handler->display->display_options['fields']['field_ko_file']['alter']['text'] = 'Download';
+  $handler->display->display_options['fields']['field_ko_file']['alter']['make_link'] = TRUE;
+  $handler->display->display_options['fields']['field_ko_file']['alter']['path'] = '[uri]';
   $handler->display->display_options['fields']['field_ko_file']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_ko_file']['click_sort_column'] = 'fid';
-  $handler->display->display_options['fields']['field_ko_file']['type'] = 'file_download_link';
   $handler->display->display_options['fields']['field_ko_file']['settings'] = array(
     'text' => 'Download [file:name]',
   );
@@ -689,6 +743,10 @@ function collabco_knowledge_feature_views_default_views() {
   $handler->display->display_options['relationships']['og_membership_rel']['id'] = 'og_membership_rel';
   $handler->display->display_options['relationships']['og_membership_rel']['table'] = 'node';
   $handler->display->display_options['relationships']['og_membership_rel']['field'] = 'og_membership_rel';
+  /* Relationship: Content: File or Media (field_ko_file:fid) */
+  $handler->display->display_options['relationships']['field_ko_file_fid']['id'] = 'field_ko_file_fid';
+  $handler->display->display_options['relationships']['field_ko_file_fid']['table'] = 'field_data_field_ko_file';
+  $handler->display->display_options['relationships']['field_ko_file_fid']['field'] = 'field_ko_file_fid';
   $handler->display->display_options['defaults']['arguments'] = FALSE;
   /* Contextual filter: OG membership: Group ID */
   $handler->display->display_options['arguments']['gid']['id'] = 'gid';
