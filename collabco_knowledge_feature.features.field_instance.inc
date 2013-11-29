@@ -236,6 +236,7 @@ function collabco_knowledge_feature_field_default_field_instances() {
   $field_instances['node-knowledge_object-og_group_ref'] = array(
     'bundle' => 'knowledge_object',
     'default_value' => NULL,
+    'default_value_function' => 'entityreference_prepopulate_field_default_value',
     'deleted' => 0,
     'description' => 'If you do not select any groups, then it will be visible to all members.',
     'display' => array(
@@ -269,6 +270,14 @@ function collabco_knowledge_feature_field_default_field_instances() {
             'widget_type' => 'options_buttons',
           ),
           'status' => TRUE,
+        ),
+        'prepopulate' => array(
+          'action' => 'disable',
+          'action_on_edit' => 0,
+          'fallback' => 'none',
+          'og_context' => 0,
+          'skip_perm' => 0,
+          'status' => 1,
         ),
       ),
       'user_register_form' => FALSE,
