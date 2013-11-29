@@ -44,7 +44,7 @@ function collabco_knowledge_feature_context_default_contexts() {
   $context->conditions = array(
     'context_og_condition_group_type' => array(
       'values' => array(
-        'closed_group' => 'closed_group',
+        '_any_' => '_any_',
       ),
       'options' => array(
         'node_form' => 1,
