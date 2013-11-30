@@ -766,7 +766,7 @@ function collabco_knowledge_feature_views_default_views() {
   $view = new view();
   $view->name = 'user_file_reference_list';
   $view->description = 'Lists all knowledge objects (files) that a user has already created.';
-  $view->tag = 'default';
+  $view->tag = 'Knowledge Feature';
   $view->base_table = 'node';
   $view->human_name = 'User File Reference List';
   $view->core = 7;
