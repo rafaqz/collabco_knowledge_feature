@@ -144,7 +144,7 @@ function collabco_knowledge_feature_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'pathauto_node_knowledge_object_pattern';
-  $strongarm->value = '[node:og-group-ref:1:content-type]/[node:og-group-ref:0:title]/[node:content-type]/[node:title]';
+  $strongarm->value = '[node:og-group-ref:0:content-type]/[node:og-group-ref:0:title]/[node:content-type]/[node:title]';
   $export['pathauto_node_knowledge_object_pattern'] = $strongarm;
 
   return $export;
