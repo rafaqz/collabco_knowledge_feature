@@ -367,6 +367,16 @@ function collabco_knowledge_feature_views_default_views() {
   /* Display: Group Page */
   $handler = $view->new_display('page', 'Group Page', 'group_page');
   $handler->display->display_options['defaults']['title'] = FALSE;
+  $handler->display->display_options['defaults']['header'] = FALSE;
+  /* Header: Global: Link */
+  $handler->display->display_options['header']['link']['id'] = 'link';
+  $handler->display->display_options['header']['link']['table'] = 'views';
+  $handler->display->display_options['header']['link']['field'] = 'link';
+  $handler->display->display_options['header']['link']['label'] = 'Add File Link';
+  $handler->display->display_options['header']['link']['empty'] = TRUE;
+  $handler->display->display_options['header']['link']['text'] = 'Add File';
+  $handler->display->display_options['header']['link']['path'] = 'node/add/file';
+  $handler->display->display_options['header']['link']['querystring'] = 'og_group_ref=!1';
   $handler->display->display_options['defaults']['arguments'] = FALSE;
   /* Contextual filter: OG membership: Group ID */
   $handler->display->display_options['arguments']['gid']['id'] = 'gid';
