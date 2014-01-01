@@ -1,8 +1,6 @@
 name = Collabco Knowledge Feature
 core = 7.x
 package = Collabco
-php = 5.2.4
-version = unknown
 project = collabco_knowledge_feature
 dependencies[] = better_exposed_filters
 dependencies[] = collabco_groups_feature
