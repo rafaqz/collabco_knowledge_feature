@@ -8,7 +8,7 @@ include_once 'collabco_knowledge_feature.features.inc';
 
 function collabco_knowledge_feature_views_pre_view($view, $display_id, $args) {
   if ($view->name == 'library' && $display_id == 'group_page') {
-    collabco_groups_feature_view_content_link($view, 'knowldege_object', 'header');
+    collabco_groups_feature_view_content_link($view, 'knowledge_object', 'header');
   }
 }
 
