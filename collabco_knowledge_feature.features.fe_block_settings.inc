@@ -39,33 +39,6 @@ function collabco_knowledge_feature_default_fe_block_settings() {
     'visibility' => 0,
   );
 
-  $export['views-innovation_at_work-block'] = array(
-    'cache' => -1,
-    'css_class' => '',
-    'custom' => 0,
-    'delta' => 'innovation_at_work-block',
-    'module' => 'views',
-    'node_types' => array(),
-    'pages' => '',
-    'roles' => array(),
-    'themes' => array(
-      'custom_theme' => array(
-        'region' => '',
-        'status' => 0,
-        'theme' => 'custom_theme',
-        'weight' => 0,
-      ),
-      'seven' => array(
-        'region' => '',
-        'status' => 0,
-        'theme' => 'seven',
-        'weight' => 0,
-      ),
-    ),
-    'title' => '',
-    'visibility' => 0,
-  );
-
   $export['views-knowledge_repository-block'] = array(
     'cache' => -1,
     'css_class' => '',
