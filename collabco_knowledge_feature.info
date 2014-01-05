@@ -74,6 +74,7 @@ features[variable][] = pathauto_node_knowledge_object_pattern
 features[views_view][] = library
 features[views_view][] = recent_files
 features[views_view][] = user_file_reference_list
+features_exclude[dependencies][collabco_settings_feature] = collabco_settings_feature
 features_exclude[dependencies][collabco_profile_feature] = collabco_profile_feature
 features_exclude[dependencies][og_field_access] = og_field_access
 features_exclude[field_base][body] = body
