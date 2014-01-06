@@ -29,7 +29,6 @@ features[fe_block_settings][] = views-knowledge_repository-block
 features[fe_block_settings][] = views-nodequeue_1-block
 features[fe_block_settings][] = views-recent_files-block
 features[fe_block_settings][] = views-recent_files-group_block
-features[fe_nodequeue][] = innovation_at_work
 features[features_api][] = api:2
 features[field_base][] = field_ko_file
 features[field_base][] = field_ko_ref
