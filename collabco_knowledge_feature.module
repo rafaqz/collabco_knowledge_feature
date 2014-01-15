@@ -9,7 +9,7 @@ include_once 'collabco_knowledge_feature.features.inc';
 /**
  * Implements hook_collabco_integration().
  */
-function colabco_knowledge_feature_collabco_integration() {
+function collabco_knowledge_feature_collabco_integration() {
   // Add links to views if a module wants to do that.
   return array(
     'collabco_knowledge_feature' => array(
@@ -21,7 +21,7 @@ function colabco_knowledge_feature_collabco_integration() {
               'entity_type' => 'none',
             ),
             'add_content_link' => array(
-              'bundle' => 'knowledge_object',
+              'bundles' => array('knowledge_object'),
               'areas' => array('header'),
             ),
           ),
