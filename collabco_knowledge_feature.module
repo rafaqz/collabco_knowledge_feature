@@ -7,31 +7,6 @@
 include_once 'collabco_knowledge_feature.features.inc';
 
 /**
- * Implements hook_collabco_integration().
- */
-function collabco_knowledge_feature_collabco_integration() {
-  // Add links to views if a module wants to do that.
-  return array(
-    'collabco_knowledge_feature' => array(
-      'views' => array(
-        'library' => array(
-          'group_page' => array(
-            'subscribe_flag' => array(
-              'group_type' => 'node',
-              'entity_type' => 'none',
-            ),
-            'add_content_link' => array(
-              'bundles' => array('knowledge_object'),
-              'areas' => array('header'),
-            ),
-          ),
-        ),
-      ),
-    ),
-  );
-}
-
-/**
  * Impliments hook_field_widget_form_alter().
  */
 function collabco_knowledge_feature_field_widget_form_alter(&$element, &$form_state, $context) {
@@ -50,5 +25,36 @@ function collabco_knowledge_feature_field_widget_form_alter(&$element, &$form_st
         break;
     }
   }
+}
+
+/**
+ * Implements hook_collabco_integration().
+ */
+function collabco_knowledge_feature_collabco_integration() {
+  // Add links to views if a module wants to do that.
+  return array(
+    'collabco_knowledge_feature' => array(
+      'entity' => array(
+        'node'=> array('knowledge_object'),
+      ),
+      'tab' => array(
+        'label' => 'Library', 
+        'subpath' => 'library',
+      ),
+      'views' => array(
+        'library' => array(
+          'group_page' => array(
+            'subscribe_flag' => array(
+              'group_type' => 'node',
+              'entity_type' => 'none',
+            ),
+            'add_content_link' => array(
+              'areas' => array('header'),
+            ),
+          ),
+        ),
+      ),
+    ),
+  );
 }
 
