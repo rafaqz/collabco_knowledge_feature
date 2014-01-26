@@ -42,7 +42,7 @@ function collabco_knowledge_feature_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'comment_knowledge_object';
-  $strongarm->value = '1';
+  $strongarm->value = '2';
   $export['comment_knowledge_object'] = $strongarm;
 
   $strongarm = new stdClass();
