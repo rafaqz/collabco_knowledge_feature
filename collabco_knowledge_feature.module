@@ -38,7 +38,10 @@ function collabco_knowledge_feature_collabco_integration() {
         'node'=> array('knowledge_object'),
       ),
       'tab' => array(
-        'Library' => 'knowledge_object',
+        'Library' => array(
+          'subpath' => 'library',
+          'node' => 'knowledge_object',
+        ),
       ),
       'views' => array(
         'library' => array(
