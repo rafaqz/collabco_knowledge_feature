@@ -99,7 +99,14 @@ function collabco_knowledge_feature_strongarm() {
           'weight' => '4',
         ),
       ),
-      'display' => array(),
+      'display' => array(
+        'social_share' => array(
+          'teaser' => array(
+            'weight' => '2',
+            'visible' => FALSE,
+          ),
+        ),
+      ),
     ),
   );
   $export['field_bundle_settings_node__knowledge_object'] = $strongarm;
