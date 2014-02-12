@@ -10,41 +10,6 @@
 function collabco_knowledge_feature_field_default_field_instances() {
   $field_instances = array();
 
-  // Exported field_instance: 'comment-comment_node_conversation-field_ko_ref'
-  $field_instances['comment-comment_node_conversation-field_ko_ref'] = array(
-    'bundle' => 'comment_node_conversation',
-    'default_value' => NULL,
-    'deleted' => 0,
-    'description' => '',
-    'display' => array(
-      'default' => array(
-        'label' => 'inline',
-        'module' => 'entityreference',
-        'settings' => array(
-          'link' => 1,
-        ),
-        'type' => 'entityreference_label',
-        'weight' => 1,
-      ),
-    ),
-    'entity_type' => 'comment',
-    'entityconnect_unload_add' => 0,
-    'entityconnect_unload_edit' => 1,
-    'field_name' => 'field_ko_ref',
-    'label' => 'Attachment',
-    'required' => 0,
-    'settings' => array(
-      'user_register_form' => FALSE,
-    ),
-    'widget' => array(
-      'active' => 1,
-      'module' => 'options',
-      'settings' => array(),
-      'type' => 'options_select',
-      'weight' => 2,
-    ),
-  );
-
   // Exported field_instance: 'comment-comment_node_knowledge_object-comment_body'
   $field_instances['comment-comment_node_knowledge_object-comment_body'] = array(
     'bundle' => 'comment_node_knowledge_object',
@@ -367,8 +332,8 @@ function collabco_knowledge_feature_field_default_field_instances() {
   t('File or Media');
   t('Groups audience');
   t('If you do not select any groups, then it will be visible to all members.');
-  t('Upload files or media to share with one or more groups');
   t('Tags');
+  t('Upload files or media to share with one or more groups');
 
   return $field_instances;
 }
