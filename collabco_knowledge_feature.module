@@ -35,12 +35,15 @@ function collabco_knowledge_feature_collabco_integration() {
   return array(
     'collabco_knowledge_feature' => array(
       'entity' => array(
-        'node'=> array('knowledge_object'),
-      ),
-      'tab' => array(
-        'Library' => array(
-          'subpath' => 'library',
-          'node' => 'knowledge_object',
+        'node'=> array(
+          'knowledge_object' => array(
+            'add_content_link' => TRUE,
+            'tab' => array(
+              'Library' => array(
+                'subpath' => 'library',
+              ),
+            ),
+          )
         ),
       ),
       'views' => array(
