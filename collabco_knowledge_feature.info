@@ -30,7 +30,6 @@ features[features_api][] = api:2
 features[field_base][] = field_ko_file
 features[field_base][] = field_ko_ref
 features[field_instance][] = comment-comment_node_knowledge_object-comment_body
-features[field_instance][] = node-conversation-field_ko_ref
 features[field_instance][] = node-knowledge_object-body
 features[field_instance][] = node-knowledge_object-field_ko_file
 features[field_instance][] = node-knowledge_object-og_group_ref

@@ -43,50 +43,6 @@ function collabco_knowledge_feature_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-conversation-field_ko_ref'
-  $field_instances['node-conversation-field_ko_ref'] = array(
-    'bundle' => 'conversation',
-    'default_value' => NULL,
-    'deleted' => 0,
-    'description' => '',
-    'display' => array(
-      'default' => array(
-        'label' => 'inline',
-        'module' => 'entityreference',
-        'settings' => array(
-          'link' => 1,
-        ),
-        'type' => 'entityreference_label',
-        'weight' => 1,
-      ),
-      'teaser' => array(
-        'label' => 'above',
-        'module' => 'entityreference',
-        'settings' => array(
-          'link' => FALSE,
-        ),
-        'type' => 'entityreference_label',
-        'weight' => 1,
-      ),
-    ),
-    'entity_type' => 'node',
-    'entityconnect_unload_add' => 0,
-    'entityconnect_unload_edit' => 1,
-    'field_name' => 'field_ko_ref',
-    'label' => 'Attachment',
-    'required' => 0,
-    'settings' => array(
-      'user_register_form' => FALSE,
-    ),
-    'widget' => array(
-      'active' => 1,
-      'module' => 'options',
-      'settings' => array(),
-      'type' => 'options_select',
-      'weight' => 33,
-    ),
-  );
-
   // Exported field_instance: 'node-knowledge_object-body'
   $field_instances['node-knowledge_object-body'] = array(
     'bundle' => 'knowledge_object',
