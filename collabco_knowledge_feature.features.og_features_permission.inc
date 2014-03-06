@@ -37,7 +37,6 @@ function collabco_knowledge_feature_og_features_default_permissions() {
   $permissions['node:closed_group:update any knowledge_object content'] = array(
     'roles' => array(
       'administrator member' => 'administrator member',
-      'member' => 'member',
     ),
   );
 
@@ -53,6 +52,7 @@ function collabco_knowledge_feature_og_features_default_permissions() {
   $permissions['node:group:create knowledge_object content'] = array(
     'roles' => array(
       'administrator member' => 'administrator member',
+      'member' => 'member',
     ),
   );
 
