@@ -171,7 +171,7 @@ function collabco_knowledge_feature_field_default_field_instances() {
         'weight' => 1,
       ),
       'teaser' => array(
-        'label' => 'inline',
+        'label' => 'hidden',
         'module' => 'file',
         'settings' => array(),
         'type' => 'file_default',
