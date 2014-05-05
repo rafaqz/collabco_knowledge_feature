@@ -68,7 +68,7 @@ function collabco_knowledge_feature_views_default_views() {
   $handler->display->display_options['fields']['rendered_entity']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['rendered_entity']['link_to_entity'] = 1;
   $handler->display->display_options['fields']['rendered_entity']['display'] = 'view';
-  $handler->display->display_options['fields']['rendered_entity']['view_mode'] = 'full';
+  $handler->display->display_options['fields']['rendered_entity']['view_mode'] = 'teaser';
   $handler->display->display_options['fields']['rendered_entity']['bypass_access'] = 0;
   /* Sort criterion: Content: Sticky */
   $handler->display->display_options['sorts']['sticky']['id'] = 'sticky';
