@@ -37,7 +37,7 @@ function collabco_knowledge_feature_views_default_views() {
       'knowledge_object' => 'knowledge_object',
       'basic_page' => 0,
       'blog' => 0,
-      'closed_group' => 0,
+      'private_group' => 0,
       'conversation' => 0,
       'group' => 0,
       'idea' => 0,
