@@ -32,17 +32,24 @@ function collabco_knowledge_feature_field_default_field_instances() {
     'settings' => array(
       'better_formats' => array(
         'allowed_formats' => array(
+          'comment' => 'comment',
+          'document' => 0,
           'email' => 0,
           'filtered_html' => 0,
           'full_html' => 0,
           'php_code' => 0,
           'plain_text' => 0,
-          'wiki' => 0,
         ),
-        'allowed_formats_toggle' => 0,
+        'allowed_formats_toggle' => 1,
         'default_order_toggle' => 0,
         'default_order_wrapper' => array(
           'formats' => array(
+            'comment' => array(
+              'weight' => 0,
+            ),
+            'document' => array(
+              'weight' => -6,
+            ),
             'email' => array(
               'weight' => 0,
             ),
@@ -58,13 +65,10 @@ function collabco_knowledge_feature_field_default_field_instances() {
             'plain_text' => array(
               'weight' => -9,
             ),
-            'wiki' => array(
-              'weight' => -6,
-            ),
           ),
         ),
       ),
-      'text_processing' => 0,
+      'text_processing' => 1,
       'user_register_form' => FALSE,
     ),
     'widget' => array(
