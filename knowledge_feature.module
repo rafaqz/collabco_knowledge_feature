@@ -1,7 +1,7 @@
 <?php
 /**
  * @file
- * Code for the Collabco Knowledge Feature feature.
+ * Code for the Knowledge Feature.
  */
 
 include_once 'knowledge_feature.features.inc';

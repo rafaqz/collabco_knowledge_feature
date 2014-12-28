@@ -1,6 +1,6 @@
-name = Collabco Knowledge Feature
+name = Knowledge Feature
 core = 7.x
-package = Collabco
+package = Features
 project = knowledge_feature
 dependencies[] = core_feature
 dependencies[] = ctools
