@@ -1,13 +1,13 @@
 <?php
 /**
  * @file
- * collabco_knowledge_feature.features.field_base.inc
+ * knowledge_feature.features.field_base.inc
  */
 
 /**
  * Implements hook_field_default_field_bases().
  */
-function collabco_knowledge_feature_field_default_field_bases() {
+function knowledge_feature_field_default_field_bases() {
   $field_bases = array();
 
   // Exported field_base: 'field_ko_file'

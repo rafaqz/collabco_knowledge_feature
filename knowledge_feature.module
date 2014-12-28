@@ -4,12 +4,12 @@
  * Code for the Collabco Knowledge Feature feature.
  */
 
-include_once 'collabco_knowledge_feature.features.inc';
+include_once 'knowledge_feature.features.inc';
 
 /**
  * Impliments hook_field_widget_form_alter().
  */
-function collabco_knowledge_feature_field_widget_form_alter(&$element, &$form_state, $context) {
+function knowledge_feature_field_widget_form_alter(&$element, &$form_state, $context) {
   if (!empty($element['#field_name'])) {
     switch ($element['#field_name']) {
       // Fixes for file and entity ref fields. These could possibly go in the 
@@ -28,12 +28,12 @@ function collabco_knowledge_feature_field_widget_form_alter(&$element, &$form_st
 }
 
 /**
- * Implements hook_collabco_integration().
+ * Implements hook_integration().
  */
-function collabco_knowledge_feature_collabco_integration() {
+function knowledge_feature_integration() {
   // Add links to views if a module wants to do that.
   return array(
-    'collabco_knowledge_feature' => array(
+    'knowledge_feature' => array(
       'entity' => array(
         'node'=> array(
           'knowledge_object' => array(

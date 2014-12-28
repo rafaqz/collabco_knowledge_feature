@@ -1,13 +1,13 @@
 <?php
 /**
  * @file
- * collabco_knowledge_feature.features.user_permission.inc
+ * knowledge_feature.features.user_permission.inc
  */
 
 /**
  * Implements hook_user_default_permissions().
  */
-function collabco_knowledge_feature_user_default_permissions() {
+function knowledge_feature_user_default_permissions() {
   $permissions = array();
 
   // Exported permission: 'create knowledge_object content'.
